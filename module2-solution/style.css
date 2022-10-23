@@ -1,0 +1,138 @@
+			*{
+				box-sizing: border-box;
+				padding: 0;
+	         	margin: 0;	
+			 }
+
+			h1{
+				text-align: center;
+				font-family: cursive;
+				color: black;
+				margin-bottom: 60px;
+				margin-top: 20px;
+				font-size: 40px;
+				font-weight: bold;
+			  }
+			  
+			.row{
+				  width: 100%;
+			  	display: grid;
+			    grid-template-columns: repeat(12,1fr);
+			    column-gap: 3px;
+			    grid-row-gap: 3px; 
+			}
+
+			 .ONE, .TWO, .THREE{
+				  border: 3px solid black;
+				  background-color: darkgrey;
+			  	padding: 10px 10px 10px 10px;
+			  	position: relative;
+			}
+
+		    .chicken, .beef, .sushi{
+				   font-family: arial, helvelica , sans-serif;
+				   font-size: 20px;
+				   font-weight: bold;
+			    	border: 3px solid black;
+				   border-right: 0px;
+            border-top: 0px;
+            padding: 1px 40px 1px 40px;
+			     	position: absolute;
+			    	top: 0;
+				    right: 0;
+		   	}	
+
+		    .chicken{
+          	    background-color: burlywood;
+            }
+            .beef{
+          	    background-color: lightsalmon;
+            }
+            .sushi{
+          	    background-color: goldenrod;
+            }
+
+            #text1, #text2, #text3{
+          	    font-family: inherit;
+          	    font-weight: bold;
+          	    float: left;
+          	    padding-top: 30px;
+            }
+
+			.ONE{
+				grid-area: ONE;
+				
+			}
+			.TWO{
+				grid-area: TWO;
+			}
+			.THREE{
+				grid-area: THREE;
+			
+			}
+
+			@media(min-width: 992px){
+				div{
+					grid-template-areas: "ONE ONE ONE ONE TWO TWO TWO TWO THREE THREE THREE THREE";}
+				.ONE{
+				    margin-left: 20px;
+				    margin-right: 10px;
+			        }
+			    .TWO{
+				    margin-right: 10px;
+				    margin-left: 10px;
+			        }
+			    .THREE{
+				    margin-left: 10px;
+				    margin-right: 20px;
+			        }
+				
+				
+			}
+
+			@media(min-width: 768px) and (max-width: 991px){
+				div{
+					grid-template-areas: "ONE ONE ONE ONE ONE ONE TWO TWO TWO TWO TWO TWO" "THREE THREE THREE THREE THREE THREE THREE THREE THREE THREE THREE THREE";
+				}
+				#text1, #text2{
+					height: 171;
+				}
+			    #text3{
+					height: 145px;
+				}
+				.ONE{
+					margin-right: 10px;
+					margin-left: 20px;
+				}
+				.TWO{
+					margin-left: 10px;
+					margin-right: 20px;
+				}
+				.THREE{
+					margin-top: 20px;
+					margin-right: 20px;
+					margin-left: 20px;
+		
+				}
+
+			}
+			@media(max-width: 768px){
+				div{
+					grid-template-areas: "ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE" "TWO TWO TWO TWO TWO TWO TWO TWO TWO TWO TWO TWO" "THREE THREE THREE THREE THREE THREE THREE THREE THREE THREE THREE THREE";
+				}
+				.ONE{
+				    margin-left: 40px;
+				    margin-right: 40px;
+				    margin-bottom: 20px;
+			     }
+			    .TWO{
+				    margin-right: 40px;
+				    margin-left: 40px;
+				    margin-bottom: 20px;
+			     }
+			    .THREE{
+				    margin-left: 40px;
+				    margin-right: 40px;
+				    margin-bottom: 20px;
+			    }
+			}
